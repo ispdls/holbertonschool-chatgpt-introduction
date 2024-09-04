@@ -5,19 +5,8 @@ def factorial(n):
     result = 1
     while n > 1:
         result *= n
-        n -= 1  # decrement n in each iteration
+        n -= 1  # Decrease n in each iteration to reach the base case (n == 1)
     return result
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: ./factorial.py <number>")
-        sys.exit(1)
-
-    try:
-        num = int(sys.argv[1])
-    except ValueError:
-        print("Error: Please provide a valid integer.")
-        sys.exit(1)
-
-    f = factorial(num)
-    print(f)
+f = factorial(int(sys.argv[1]))
+print(f)
